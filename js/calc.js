@@ -1,44 +1,28 @@
-function calc(operation, x, y) {
-
-    switch(operation) {
-        case "plus":
-            result = add(x,y)
-            break
+var op;
+function func(){
+    var result;
+    var num1 = Number(document.getElementById("num1").value);
+    var num2 = Number(document.getElementById("num2").value);
+    switch (op) {
+        case '+':
+            result = num1 + num2;
+            break;
         case '-':
-            result = sub(x,y)
-            break
+            result = num1 - num2;
+            break;
         case '*':
-            result = devision(x, y)
-            break
+            result = num1 * num2;
+            break;
         case '/':
-            result = mul(x,y)
-            break
+            if (num2) {
+            result = num1 / num2;
+            } else {
+            result = 'на ноль делить нельзя!';
+            }
+            break;
+        default:
+            result = 'выберите операцию';
     }
-    alert(result)
-}
 
-function add(x, y) {
-    result = x + y;
-    return result
-}
-
-
-function sub(x,y) {
-
-    result = x - y;
-    return result
-}
-
-function devision(x,y) {
-    if (y == 0); {
-
+    document.getElementById("result").value = result;
     }
-    result = x - y;
-    return result
-}
-
-function sub(x,y) {
-
-    result = x - y;
-    return result
-}

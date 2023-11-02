@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Калькулятор</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="container"></div>
@@ -32,36 +32,7 @@
         <br>
         <input type="text" readonly placeholder="" id="result">
 
-        <script>
-            var op;
-            function func(){
-                var result;
-                var num1 = Number(document.getElementById("num1").value);
-                var num2 = Number(document.getElementById("num2").value);
-                switch (op) {
-                    case '+':
-                        result = num1 + num2;
-                        break;
-                    case '-':
-                        result = num1 - num2;
-                        break;
-                    case '*':
-                        result = num1 * num2;
-                        break;
-                    case '/':
-                        if (num2) {
-                        result = num1 / num2;
-                        } else {
-                        result = 'на ноль делить нельзя!';
-                        }
-                        break;
-                    default:
-                        result = 'выберите операцию';
-                }
-
-                document.getElementById("result").value = result;
-                }
-            </script>
+        <script src="./js/calc.js"></script>
     </div>
     </main>
 
